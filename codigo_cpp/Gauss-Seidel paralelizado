@@ -1,0 +1,108 @@
+#include <iostream>
+#include <vector>
+#include <cmath> // Para std::abs
+#include <algorithm> // Para std::max
+#include <mpi.h>
+
+
+double calcular_delta(const std::vector<double> &phi, const std::vector<double> &phi_copy) {
+	double delta = 0.0;
+	for (size_t i = 0; i < phi.size(); ++i) {
+		delta = std::max(delta, std::abs(phi[i] - phi_copy[i]));
+	}
+	return delta;
+}
+
+int main(int argc, char* argv[]) {
+	if (argc != 7) {
+		std::cerr << "Usage: " << argv[0] << " --N [Tamaño lineal de la grilla cuadrada (NxN)] --t [Tolerancia] --L [Tamaño lineal del capacitor cuadrado (LxL)]" << std::endl;
+		return 1;
+	}
+
+	std::cout << "Bienvenido." << std::endl;
+	std::cout << "Se está calculando la solución de la ecuación de Laplace bajo los parámetros definidos..." 
+	
+	// Inicialización del ambiente MPI
+
+  int size, rank;
+  MPI_Init(&argc, &argv);
+ 
+  MPI_Comm_size(MPI_COMM_WORLD, &size); // Con esto se obtiene el número de procesos 
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank); // Aquí se obtiene el rank de cada proceso
+
+ vector<vector<double>> A(N, vector<double>(N, 0.0));  // Esto es para la matriz A de coeficientes
+ vector<double> b(N, 1.0);  // Vector del lado derecho
+ vector<double> x(N, 0.0);  // Esto es la solución inicial en cero
+
+ if (rank == 0) {    // Inicializando la matriz A  
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                A[i][j] = (i == j) ? 4.0 : -1.0;  
+            }
+        }
+    }
+
+// Ahora se distribuye la matriz A entre los procesos, es deicr, envía un mensaje desde el proceso root a los proc del grupo 
+
+MPI_Bcast(A.data(), N * N, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+MPI_Bcast(b.data(), N, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+std::cout << "Después de realizar las iteraciones " << rank << " el resultado es: " << imesg << std::endl;
+
+MPI_Finalize();  // Finalizar MPI
+return 0;
+}
+
+  	int N = atoi(argv[2]);  // Tamaño de la grilla (NxN)
+	double tolerance = atof(argv[4]);  // Tolerancia
+	int L = atoi(argv[6]);  // Tamaño lineal del capacitor físico
+	int grilla_size = N + 1;  // Tamaño total de la grilla (incluye frontera)
+
+	std::vector<double> phi(grilla_size * grilla_size, 0.0);
+
+	// Se convierte las dimensiones físicas del capacitor a índices en la grilla
+	int start_y = (N/L) * 2.0;  // Coordenada inicial (y = 2cm)
+	int end_y = (N/L) * 8.0;    // Coordenada final (y= 8cm)
+	int plate_x1 = (N / L) * 2.0; // Línea vertical izquierda (x = 2cm)
+	int plate_x2 = (N / L) * 8.0; // Línea vertical derecha (x = 8cm)
+
+	// Condiciones iniciales en las placas
+	for (int i = start_y; i < end_y; ++i) {
+		phi[i * grilla_size + plate_x1] = 1.0;  // +1V en la placa izquierda
+		phi[i * grilla_size + plate_x2] = -1.0; // -1V en la placa derecha
+	}
+
+	std::vector<double> phi_copy = phi; // Copia inicial de phi
+
+	double delta = 1.0;
+	int its = 0;
+
+	while (delta > tolerance) {
+		its++;
+
+		// Se actualiza los valores de phi en toda la grilla excepto en los bordes
+		for (int i = 1; i < N; ++i) {
+			for (int j = 1; j < N; ++j) {
+				phi[i * grilla_size + j] = (1.0 / 4.0) *
+				                           (phi[(i + 1) * grilla_size + j] +
+				                            phi[(i - 1) * grilla_size + j] +
+				                            phi[i * grilla_size + (j + 1)] +
+				                            phi[i * grilla_size + (j - 1)]);
+			}
+		}
+
+      // Restauro el potencial en las placas ya que este fue modificado
+		for (int i = start_y; i < end_y; ++i) {
+			phi[i * grilla_size + plate_x1] = 1.0;
+			phi[i * grilla_size + plate_x2] = -1.0;
+		}
+
+		delta = calcular_delta(phi, phi_copy);
+
+		phi_copy = phi; // Actualizamos phi_copy con los nuevos valores de phi
+	}
+
+	std::cout << "Se llegó a la tolerancia tras " << its << " iteraciones." << std::endl;
+
+	return 0;
+}
