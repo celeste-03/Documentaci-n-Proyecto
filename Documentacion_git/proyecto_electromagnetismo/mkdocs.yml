@@ -1,7 +1,7 @@
 site_name: Proyecto Electromagnetismo
 nav:
   - Inicio: index.md
-  - Métodos Python:
+  - Métodos en Python:
       - Relajación Jacobi: scripts/Relajacion_Jacobi.md
       - Gauss-Seidel: scripts/Gauss_Seidel.md
       - Jacobi Modificado: notebooks/jacobi_modificado.md
