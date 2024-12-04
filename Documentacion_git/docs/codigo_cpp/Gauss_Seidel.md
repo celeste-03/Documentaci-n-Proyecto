@@ -77,5 +77,5 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-Se logra la convergencia tras 1196 iteraciones.
+Se logra la convergencia tras 1196 iteraciones (las mismas que presenta su contraparte en python).
 

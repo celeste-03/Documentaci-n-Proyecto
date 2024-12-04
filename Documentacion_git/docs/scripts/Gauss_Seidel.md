@@ -1,6 +1,6 @@
 # Método de Gauss-Seidel
 
-En script se implementa el método de Gauss-Seidel, en el que se busca iterar sobre el mismo campo en memoria, lo que permite una convergencia mas rapida. De todas maneras, por la naturaleza del método, es necesario usar `for` loops, lo que afecta la velocidad.
+En este script se implementa el método de Gauss-Seidel, en el que se busca iterar sobre el mismo campo en memoria, lo que permite una convergencia mas rapida. De todas maneras, por la naturaleza del método, es necesario usar `for` loops, lo que afecta la velocidad.
 
 ---
 

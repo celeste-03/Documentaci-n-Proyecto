@@ -14,6 +14,8 @@
 
 Bienvenido, este proyecto pretende resolver la ecuacion de Laplace aplicada a un capacitor electrónico ideal.
 
+Esta página tiene como objetivo documentar el código presente en el repositorio [Proyecto_Electromagnetismo](https://github.com/angelf02/Proyecto_Electromagnetismo).
+
 Se resuelve la ecuación de Laplace en dos dimensiones para el potencial electrostático
 
  &phi; = &phi;(x, y)
@@ -33,6 +35,6 @@ Este proyecto incluye:
 
 - Métodos numéricos para resolver ecuaciones diferenciales parciales.
 - Implementaciones en Python y C++.
-- Simulaciones paralelas con OpenMP y MPI.
+- Paralelización con OpenMP y MPI.
 - Visualización de resultados y análisis numérico.
 
