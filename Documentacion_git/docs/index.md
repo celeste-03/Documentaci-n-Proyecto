@@ -5,7 +5,6 @@
 ## Estudiantes
 
 - **Carlos Echandi Jara (B92687)**
-- **Natalia Iannarella Arguedas (A83166)**
 - **Ángel Fabricio Aguirre Bermúdez (C10152)**
 - **María Celeste Ureña Sandí (B98009)**
 
