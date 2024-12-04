@@ -3,11 +3,12 @@ nav:
   - Inicio: index.md
   - Métodos en Python:
       - Relajación Jacobi: scripts/Relajacion_Jacobi.md
-      - Gauss-Seidel: scripts/Gauss_Seidel.md
       - Jacobi Modificado: notebooks/jacobi_modificado.md
+      - Gauss Seidel: scripts/Gauss_Seidel.md
   - Código en C++:
-      - Gauss-Seidel: codigo_cpp/Gauss_Seidel.md
-      - Gauss-Seidel Memloc: codigo_cpp/Gauss_Seidel_Memloc.md
+      - Gauss Seidel: codigo_cpp/Gauss_Seidel.md
+      - Gauss Seidel en memoria compartida: codigo_cpp/Gauss_Seidel_Memloc.md
+      - Gauss Seidel en memoria distribuida: codigo_cpp/Gauss_Seidel_Dist.md
 theme:
   name: material
   palette:

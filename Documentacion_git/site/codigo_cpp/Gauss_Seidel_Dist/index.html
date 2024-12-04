@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../scripts/Relajacion_Jacobi/">
+        <link rel="prev" href="../Gauss_Seidel_Memloc/">
       
-      
-        <link rel="next" href="../../scripts/Gauss_Seidel/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Jacobi Modificado - Proyecto Electromagnetismo</title>
+        <title>Gauss Seidel en memoria distribuida - Proyecto Electromagnetismo</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metodo-de-relajacion-de-jacobi-modificado" class="md-skip">
+        <a href="#solucion-de-la-ecuacion-de-laplace-en-c" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Jacobi Modificado
+              Gauss Seidel en memoria distribuida
             
           </span>
         </div>
@@ -216,19 +214,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -242,7 +238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Métodos en Python
@@ -274,19 +270,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../notebooks/jacobi_modificado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,7 +282,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -333,17 +319,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -357,7 +345,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Código en C++
@@ -371,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codigo_cpp/Gauss_Seidel/" class="md-nav__link">
+      <a href="../Gauss_Seidel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codigo_cpp/Gauss_Seidel_Memloc/" class="md-nav__link">
+      <a href="../Gauss_Seidel_Memloc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,10 +398,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../codigo_cpp/Gauss_Seidel_Dist/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gauss Seidel en memoria distribuida
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -422,6 +430,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Fuente
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -454,6 +491,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Fuente
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -467,65 +521,83 @@
                   
 
 
-<h1 id="metodo-de-relajacion-de-jacobi-modificado">Método de Relajación de Jacobi Modificado</h1>
-<p>Este notebook implementa una mejora al método de Jacobi, añadiendo sobre-relajación para acelerar la convergencia en sistemas lineales.</p>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
+<h1 id="solucion-de-la-ecuacion-de-laplace-en-c">Solución de la Ecuación de Laplace en C++</h1>
+<p>Este programa en C++ resuelve la ecuación de Laplace en una grilla 2D utilizando el método de relajación iterativa.</p>
+<p>AAA</p>
+<h2 id="codigo-fuente">Código Fuente</h2>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt; // Para std::abs
+#include &lt;algorithm&gt; // Para std::max
 
-def jacobi_relaxation_mod(N, tolerance, L, V1, V2, omega):
-    # Inicializar la matriz phi (potencial eléctrico)
-    phi = np.zeros((N + 1, N + 1), dtype=float)
+double calcular_delta(const std::vector&lt;double&gt; &amp;phi, const std::vector&lt;double&gt; &amp;phi_copy) {
+    double delta = 0.0;
+    for (size_t i = 0; i &lt; phi.size(); ++i) {
+        delta = std::max(delta, std::abs(phi[i] - phi_copy[i]));
+    }
+    return delta;
+}
 
-    # Aplicar condiciones de frontera
-    phi[int((N / L) * 2):int((N / L) * 8), int((N / L) * 2)] = V1
-    phi[int((N / L) * 2):int((N / L) * 8), int((N / L) * 8)] = V2
+int main(int argc, char* argv[]) {
+    if (argc != 7) {
+        std::cerr &lt;&lt; &quot;Usage: &quot; &lt;&lt; argv[0] &lt;&lt; &quot; --N [Tamaño lineal de la grilla cuadrada (NxN)] --t [Tolerancia] --L [Tamaño lineal del capacitor cuadrado (LxL)]&quot; &lt;&lt; std::endl;
+        return 1;
+    }
 
-    delta = 1.0
-    iteration = 0
+    std::cout &lt;&lt; &quot;Bienvenido.&quot; &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;Se esta calculando la solucion de la ecuacion de Laplace bajo los parametros definidos...&quot; &lt;&lt; std::endl;
 
-    while delta &gt; tolerance:
-        phi_new = phi.copy()
-        iteration += 1
-        phi_new[1:N, 1:N] = (1.0 + omega) * 0.25 * (
-            phi[2:N + 1, 1:N] + phi[0:N - 1, 1:N] + 
-            phi[1:N, 2:N + 1] + phi[1:N, 0:N - 1]
-        ) - omega * phi[1:N, 1:N]
+    int N = atoi(argv[2]);  // Tamaño de la grilla (NxN)
+    double tolerance = atof(argv[4]);  // Tolerancia
+    int L = atoi(argv[6]);  // Tamaño lineal del capacitor fisico
+    int grilla_size = N + 1;  // Tamaño total de la grilla (incluye frontera)
 
-        phi_new[int((N / L) * 2):int((N / L) * 8), int((N / L) * 2)] = V1
-        phi_new[int((N / L) * 2):int((N / L) * 8), int((N / L) * 8)] = V2
+    std::vector&lt;double&gt; phi(grilla_size * grilla_size, 0.0);
 
-        delta = np.max(np.abs(phi - phi_new))
-        phi = phi_new
+    int start_y = (N/L) * 2.0;  // Coordenada inicial (y = 2cm)
+    int end_y = (N/L) * 8.0;    // Coordenada final (y= 8cm)
+    int plate_x1 = (N / L) * 2.0; // Línea vertical izquierda (x = 2cm)
+    int plate_x2 = (N / L) * 8.0; // Línea vertical derecha (x = 8cm)
 
-    print(f&quot;El método convergió en {iteration} iteraciones.&quot;)
-    return phi, iteration
+    for (int i = start_y; i &lt; end_y; ++i) {
+        phi[i * grilla_size + plate_x1] = 1.0;  // +1V en la placa izquierda
+        phi[i * grilla_size + plate_x2] = -1.0; // -1V en la placa derecha
+    }
 
-phi, num_iterations = jacobi_relaxation_mod(100, 1e-3, 10, 1, -1, 1.5)
+    std::vector&lt;double&gt; phi_copy = phi;
 
+    double delta = 1.0;
+    int its = 0;
 
-El método convergió en 523 iteraciones.
+    while (delta &gt; tolerance) {
+        its++;
 
-/tmp/ipykernel_5055/757925980.py:23: RuntimeWarning: overflow encountered in add
-  phi[2:N + 1, 1:N] + phi[0:N - 1, 1:N] +
-/tmp/ipykernel_5055/757925980.py:25: RuntimeWarning: overflow encountered in multiply
-  ) - omega * phi[1:N, 1:N]
-/tmp/ipykernel_5055/757925980.py:22: RuntimeWarning: overflow encountered in subtract
-  phi_new[1:N, 1:N] = (1.0 + omega) * 0.25 * (
-/tmp/ipykernel_5055/757925980.py:32: RuntimeWarning: overflow encountered in subtract
-  delta = np.max(np.abs(phi - phi_new))
-/tmp/ipykernel_5055/757925980.py:23: RuntimeWarning: invalid value encountered in add
-  phi[2:N + 1, 1:N] + phi[0:N - 1, 1:N] +
+        for (int i = 1; i &lt; N; ++i) {
+            for (int j = 1; j &lt; N; ++j) {
+                phi[i * grilla_size + j] = (1.0 / 4.0) *
+                    (phi[(i + 1) * grilla_size + j] +
+                     phi[(i - 1) * grilla_size + j] +
+                     phi[i * grilla_size + (j + 1)] +
+                     phi[i * grilla_size + (j - 1)]);
+            }
+        }
 
-# Graficar el resultado después de la convergencia, en este caso diverge este método.
-#plt.figure(figsize=(8, 6))
-#plt.imshow(phi, extent=[0, 10, 0, 10], origin='lower', cmap='viridis', interpolation='bilinear')
-#plt.colorbar(label='Potencial eléctrico (phi)')
-#plt.title(f'Distribución del Potencial Eléctrico - Iteraciones: {num_iterations}')
-#plt.xlabel('x')
-#plt.ylabel('y')
-#plt.show()
+        for (int i = start_y; i &lt; end_y; ++i) {
+            phi[i * grilla_size + plate_x1] = 1.0;
+            phi[i * grilla_size + plate_x2] = -1.0;
+        }
 
+        delta = calcular_delta(phi, phi_copy);
+
+        phi_copy = phi;
+    }
+
+    std::cout &lt;&lt; &quot;Se llego a la tolerancia tras &quot; &lt;&lt; its &lt;&lt; &quot; iteraciones.&quot; &lt;&lt; std::endl;
+    return 0;
+}
 </code></pre>
+<p>Gráfico
+<img alt="Descripción de la imagen" src="../Gauss.jpeg" /></p>
 
 
 
