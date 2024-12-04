@@ -524,7 +524,7 @@
 
 
 <h1 id="relajacion-jacobi">Relajación Jacobi</h1>
-<p>Este script implementa el método de relajación Jacobi para resolver sistemas de ecuaciones en una grilla 2D. Es útil en aplicaciones como simulaciones de potencial eléctrico.</p>
+<p>Este script pretende implementar el método de relajación de Jacobi para resolver la ecuación de Laplace. Es útil en aplicaciones como simulaciones de potencial eléctrico, y facilita la representación grafica de la solución.</p>
 <h2 id="codigo">Código</h2>
 <pre><code class="language-python">import numpy as np
 def jacobi_relaxation(N=100, tolerance=1e-5, L=10, V1=1, V2=-1):
@@ -566,6 +566,7 @@ plt.imshow(jacobi_vals)
 plt.gray()
 plt.show()
 </code></pre>
+<p>Converge tras 1803 iteraciones.</p>
 <p>Gráfico
 <img alt="Descripción de la imagen" src="../Jacobi.jpeg" /></p>
 

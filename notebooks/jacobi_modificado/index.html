@@ -468,7 +468,7 @@
 
 
 <h1 id="metodo-de-relajacion-de-jacobi-modificado">Método de Relajación de Jacobi Modificado</h1>
-<p>Este notebook implementa una mejora al método de Jacobi, añadiendo sobre-relajación para acelerar la convergencia en sistemas lineales.</p>
+<p>Este código pretende implementar una mejora al método de Jacobi, añadiendo un factor omega para acelerar la convergencia en sistemas lineales.</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
@@ -526,6 +526,7 @@ El método convergió en 523 iteraciones.
 #plt.show()
 
 </code></pre>
+<p>Se encuentra que para este problema en especifico, la solución bajo Jacobi modificado siempre diverge sin importar el valor de omega.</p>
 
 
 
