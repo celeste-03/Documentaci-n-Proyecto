@@ -1,6 +1,7 @@
 # Solución Paralela de la Ecuación de Laplace con OpenMP
 
-Este programa resuelve la ecuación de Laplace en una grilla 2D utilizando el método de relajación iterativa, optimizado con OpenMP para computación paralela.
+Aca se busca paralelizar con el uso de OpenMP, de manera que se trabaja en memoria compartida.
+
 
 ## Código Fuente
 
@@ -96,9 +97,10 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
-Gráfico
-![Descripción de la imagen](Gauss.jpeg)
 
-Escalabilidad
+Converge tras 1143 iteraciones.
+
+Escalabilidad:
+
 ![Descripción de la imagen](escala.jpeg)
 

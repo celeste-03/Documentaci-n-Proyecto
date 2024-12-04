@@ -1,6 +1,6 @@
 # Relajación Jacobi
 
-Este script implementa el método de relajación Jacobi para resolver sistemas de ecuaciones en una grilla 2D. Es útil en aplicaciones como simulaciones de potencial eléctrico.
+Este script pretende implementar el método de relajación de Jacobi para resolver la ecuación de Laplace. Es útil en aplicaciones como simulaciones de potencial eléctrico, y facilita la representación grafica de la solución.
 
 ## Código
 
@@ -45,6 +45,8 @@ plt.imshow(jacobi_vals)
 plt.gray()
 plt.show()
 ```
+
+Converge tras 1803 iteraciones.
 
 Gráfico
 ![Descripción de la imagen](Jacobi.jpeg)

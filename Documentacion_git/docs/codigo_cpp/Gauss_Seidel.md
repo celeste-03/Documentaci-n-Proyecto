@@ -1,6 +1,6 @@
 # Solución de la Ecuación de Laplace en C++
 
-Este programa en C++ resuelve la ecuación de Laplace en una grilla 2D utilizando el método de relajación iterativa.
+Aqui se presenta una traducción del código implementado en python. Esto con el objetivo de mejorar su velocidad, y posteriormente paralelizar.
 
 ## Código Fuente
 
@@ -76,6 +76,6 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
-Gráfico
-![Descripción de la imagen](Gauss.jpeg)
+
+Se logra la convergencia tras 1196 iteraciones.
 

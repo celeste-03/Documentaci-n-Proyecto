@@ -1,8 +1,7 @@
-# Solución de la Ecuación de Laplace en C++
+# Solución de la Ecuación de Laplace en C++ en memoria compartida 
 
-Este programa en C++ resuelve la ecuación de Laplace en una grilla 2D utilizando el método de relajación iterativa.
+Este código pretende utilizar MPI para lograr una paralelización en memoria compartida. En resumen cada proceso se queda con una banda horizontal de la placa, esta banda esta compuesta por una región sobre la que itera, y los valores colindantes. Luego, los procesos con `rank` par se comunican los de `rank` impar para actualizar dichos valores colindantes e iterar de manera independiente.
 
-AAA
 
 
 ## Código Fuente
@@ -174,4 +173,6 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
+Necesita 1199 iteraciones.
 

@@ -12,7 +12,7 @@
 
 ---
 
-Bienvenidos al proyecto de simulación de ecuaciones diferenciales aplicadas a un modelo de forma ideal un capacitor electrónico.
+Bienvenido, este proyecto pretende resolver la ecuacion de Laplace aplicada a un capacitor electrónico ideal.
 
 Se resuelve la ecuación de Laplace en dos dimensiones para el potencial electrostático
 
@@ -22,6 +22,7 @@ Se resuelve la ecuación de Laplace en dos dimensiones para el potencial electro
 
 ![Descripción de la imagen](Ec_Laplace.png)
 
+En una placa cuadrada de 10 cm × 10 cm . El problema modela de forma ideal el capacitor electronico que se presenta en la siguiente figura:
 
 ![Descripción de la imagen](Capacitor.png)
 
@@ -32,6 +33,6 @@ Este proyecto incluye:
 
 - Métodos numéricos para resolver ecuaciones diferenciales parciales.
 - Implementaciones en Python y C++.
-- Simulaciones paralelas con OpenMP.
+- Simulaciones paralelas con OpenMP y MPI.
 - Visualización de resultados y análisis numérico.
 

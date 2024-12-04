@@ -1,6 +1,6 @@
 # Método de Gauss-Seidel
 
-Este script implementa el método de Gauss-Seidel para resolver sistemas de ecuaciones en una grilla 2D. Este método es útil para simular el comportamiento del potencial eléctrico en sistemas discretizados.
+En script se implementa el método de Gauss-Seidel, en el que se busca iterar sobre el mismo campo en memoria, lo que permite una convergencia mas rapida. De todas maneras, por la naturaleza del método, es necesario usar `for` loops, lo que afecta la velocidad.
 
 ---
 
@@ -46,6 +46,9 @@ def gauss_seidel(N=100, tolerance=1e-5, L=10, V1=1, V2=-1):
 gauss_vals, iterations = gauss_seidel()
 print(iterations)
 ```
+
+Este método converge en 1196 iteraciones, una gran mejora respecto a Jacobi (1803 iteraciones).
+
 Gráfico
 ![Descripción de la imagen](Gauss.jpeg)
 
